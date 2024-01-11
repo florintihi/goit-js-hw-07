@@ -20,6 +20,9 @@ const liImage = galleryItems
 galleryContainer.insertAdjacentHTML("afterbegin", liImage);
 
 function handleClick(event) {
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}">
     `);
