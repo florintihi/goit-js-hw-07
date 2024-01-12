@@ -29,7 +29,7 @@ function handleClick(event) {
   event.preventDefault();
   instance.show();
 
-  document.addEventListener("keydown", (e) => {
+  galleryContainer.addEventListener("keydown", (e) => {
     if (e.code === "Escape" && basicLightbox.visible()) {
       instance.close();
     }
